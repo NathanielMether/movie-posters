@@ -26,6 +26,15 @@
     <%= form.text_area :description, id: :movie_description %>
   </div>
 
+  <div class="field">
+    <%= form.label :poster_image %>
+    <%= form.file_field :poster_image, id: :movie_poster_image %>
+  </div>
+
+  <div class="field">
+    Remove attachment: <%= form.check_box :remove_poster_image %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

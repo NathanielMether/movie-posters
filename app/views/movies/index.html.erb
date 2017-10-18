@@ -21,6 +21,11 @@
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <% if movie.poster_image %>
+            <%= image_tag movie.poster_image_url(:thumb)%>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

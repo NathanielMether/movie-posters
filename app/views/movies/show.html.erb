@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<figure>
+  <% if @movie.poster_image %>
+    <%= image_tag @movie.poster_image_url(:original) %>
+  <% end %>
+</figure>
+
 <p>
   <strong>Title:</strong>
   <%= @movie.title %>
